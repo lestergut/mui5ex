@@ -1,4 +1,4 @@
-const Cards = [
+const Data = [
    {
       id: 0,
       category: 2, //Histotrac
@@ -25,4 +25,4 @@ const Cards = [
    },
 ];
 
-export default Cards;
+export default Data;
