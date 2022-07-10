@@ -5,10 +5,10 @@ const Rightbar = () => {
       <Box
          bgcolor="lightcoral"
          flex={2}
-         p={2}
+         p={1}
          sx={{ display: { xs: 'none', sm: 'block' } }}
       >
-         Rightbar
+         <h1>Rightbar</h1>
       </Box>
    );
 };

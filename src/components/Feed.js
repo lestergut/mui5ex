@@ -7,7 +7,7 @@ const Feed = ({ children }) => {
    const [expanded, setExpanded] = useState(false);
 
    return (
-      <Box bgcolor="lightgrey" flex={4} p={2}>
+      <Box bgcolor="lightgrey" flex={4} p={1}>
          {children}
       </Box>
    );
