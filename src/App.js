@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Rightbar from './components/Rightbar';
-import { Stack, Box } from '@mui/material';
+import { Stack, Box, CssBaseline } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import Donor from './components/Donor';
 import Histotrac from './components/Histotrac';
@@ -11,17 +11,20 @@ import GenericPRA from './components/GenericPRA';
 import Other from './components/Other';
 
 function App() {
+   const drawerWidth = 210;
+
    return (
       <Box>
-         <Navbar />
+         <CssBaseline />
+         <Navbar drawerWidth={drawerWidth} />
          <Stack
             direction="row"
             spacing={0}
             justifyContent="space-between"
             alignItems="flex-start"
          >
-            <Sidebar />
-            <Feed>
+            <Sidebar drawerWidth={drawerWidth} />
+            <Feed drawerWidth={drawerWidth}>
                <Routes>
                   {/* <Route path="/" element={<App />} /> */}
                   <Route path="/donor" element={<Donor />} />

@@ -26,10 +26,16 @@ const Search = styled('div')(({ theme }) => ({
 
 const Icons = styled(Box)(({ theme }) => ({}));
 
-const Navbar = () => {
+const Navbar = ({ drawerWidth }) => {
    const [open, setOpen] = useState(false);
    return (
-      <AppBar position="sticky">
+      <AppBar
+         position="sticky"
+         /* sx={{
+            width: `calc(100% - ${drawerWidth}px)`,
+            ml: `calc(${drawerWidth}px - width)`,
+         }} */
+      >
          <StyledToolbar>
             <Typography
                variant="h5"

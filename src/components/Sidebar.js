@@ -14,9 +14,9 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 const LinkPages = ['Donor', 'Histotrac', 'Outport', 'GenericPRA', 'Other'];
-const drawerWidth = 150;
+// const drawerWidth = 150;
 
-const Sidebar = () => {
+const Sidebar = ({ drawerWidth }) => {
    let navigate = useNavigate();
    return (
       <Box
@@ -26,13 +26,12 @@ const Sidebar = () => {
             display: { xs: 'none', sm: 'block' },
          }}
       >
-         <CssBaseline />
-         <Box position="fixed" bgcolor="primary">
+         <Box position="fixed">
             <Drawer
                variant="permanent"
                sx={{
                   width: drawerWidth,
-                  flexShrink: 2,
+                  flexShrink: 0,
                   [`& .MuiDrawer-paper`]: {
                      width: drawerWidth,
                      boxSizing: 'border-box',
@@ -54,25 +53,6 @@ const Sidebar = () => {
                   </List>
                </Box>
             </Drawer>
-
-            {/*  <List>
-               {LinkPages.map((Page) => (
-                  <ListItem disablePadding key={uuidv4()}>
-                     <Link
-                        to={`/${Page.toLowerCase()}`}
-                        component={Page}
-                        style={{
-                           textDecoration: 'none',
-                           color: 'black',
-                        }}
-                     >
-                        <ListItemButton>
-                           <ListItemText primary={Page} />
-                        </ListItemButton>
-                     </Link>
-                  </ListItem>
-               ))}
-            </List> */}
          </Box>
       </Box>
    );
