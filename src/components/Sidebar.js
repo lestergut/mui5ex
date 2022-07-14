@@ -9,12 +9,10 @@ import {
    ListItemIcon,
    ListItemText,
 } from '@mui/material';
-import InboxIcon from '@mui/icons-material/Inbox';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 const LinkPages = ['Donor', 'Histotrac', 'Outport', 'GenericPRA', 'Other'];
-// const drawerWidth = 150;
 
 const Sidebar = ({ drawerWidth }) => {
    let navigate = useNavigate();
@@ -22,22 +20,18 @@ const Sidebar = ({ drawerWidth }) => {
       <Box
          flex={1}
          p={1}
+         flexShrink={1}
          sx={{
             display: { xs: 'none', sm: 'block' },
+            width: drawerWidth,
+            /* [`& .MuiDrawer-paper`]: {
+               width: drawerWidth,
+               boxSizing: 'border-box',
+            }, */
          }}
       >
          <Box position="fixed">
-            <Drawer
-               variant="permanent"
-               sx={{
-                  width: drawerWidth,
-                  flexShrink: 0,
-                  [`& .MuiDrawer-paper`]: {
-                     width: drawerWidth,
-                     boxSizing: 'border-box',
-                  },
-               }}
-            >
+            <Drawer variant="permanent">
                <Toolbar />
                <Box sx={{ overflow: 'auto' }}>
                   <List>

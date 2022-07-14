@@ -10,10 +10,11 @@ const Feed = ({ children, drawerWidth }) => {
       <Box
          bgcolor="lightgrey"
          flex={4}
+         flexShrink={1}
          p={1}
          sx={{
             width: `calc(100% - ${drawerWidth}px)`,
-            // ml: `${drawerWidth}px)`,
+            ml: `${drawerWidth}px)`,
          }}
       >
          {children}

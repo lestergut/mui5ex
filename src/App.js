@@ -16,7 +16,7 @@ function App() {
    return (
       <Box>
          <CssBaseline />
-         <Navbar drawerWidth={drawerWidth} />
+         <Navbar />
          <Stack
             direction="row"
             spacing={0}
