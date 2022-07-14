@@ -9,6 +9,7 @@ import {
    ListItemIcon,
    ListItemText,
 } from '@mui/material';
+import { red } from '@mui/material/colors';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -31,7 +32,10 @@ const Sidebar = ({ drawerWidth }) => {
          }}
       >
          <Box position="fixed">
-            <Drawer variant="permanent">
+            <Drawer
+               variant="permanent"
+               sx={{ width: drawerWidth, rm: drawerWidth, border: red }}
+            >
                <Toolbar />
                <Box sx={{ overflow: 'auto' }}>
                   <List>

@@ -11,7 +11,7 @@ import GenericPRA from './components/GenericPRA';
 import Other from './components/Other';
 
 function App() {
-   const drawerWidth = 210;
+   const drawerWidth = 165;
 
    return (
       <Box>
@@ -21,7 +21,7 @@ function App() {
             direction="row"
             spacing={0}
             justifyContent="space-between"
-            alignItems="flex-start"
+            // alignItems="flex-start"
          >
             <Sidebar drawerWidth={drawerWidth} />
             <Feed drawerWidth={drawerWidth}>
