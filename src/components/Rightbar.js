@@ -7,7 +7,7 @@ const Rightbar = () => {
          flex={2}
          flexShrink={1}
          p={1}
-         sx={{ display: { xs: 'none', sm: 'block' } }}
+         sx={{ display: { xs: 'none', sm: 'block', flexGrow: 1 } }}
       >
          <h1>Rightbar</h1>
       </Box>

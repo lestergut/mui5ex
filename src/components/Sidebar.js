@@ -24,17 +24,23 @@ const Sidebar = ({ drawerWidth }) => {
          flexShrink={1}
          sx={{
             display: { xs: 'none', sm: 'block' },
-            width: drawerWidth,
-            /* [`& .MuiDrawer-paper`]: {
-               width: drawerWidth,
-               boxSizing: 'border-box',
-            }, */
+            flexGrow: 1,
+            // width: drawerWidth,
          }}
       >
          <Box position="fixed">
             <Drawer
                variant="permanent"
-               sx={{ width: drawerWidth, rm: drawerWidth, border: red }}
+               sx={{
+                  // width: drawerWidth,
+                  lm: 0,
+                  rm: drawerWidth,
+                  borderColor: red,
+                  [`& .MuiDrawer-paper`]: {
+                     width: drawerWidth,
+                     boxSizing: 'border-box',
+                  },
+               }}
             >
                <Toolbar />
                <Box sx={{ overflow: 'auto' }}>

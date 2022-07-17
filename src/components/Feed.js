@@ -6,15 +6,17 @@ import KwnoledgeUnit from './KwnoledgeUnit';
 const Feed = ({ children, drawerWidth }) => {
    const [expanded, setExpanded] = useState(false);
 
+   const feedStart = drawerWidth + 2;
+
    return (
       <Box
          bgcolor="lightgrey"
          flex={4}
-         flexShrink={1}
          p={1}
          sx={{
             width: `calc(100% - ${drawerWidth}px)`,
-            ml: `${drawerWidth}px)`,
+            // ml: `calc(${drawerWidth}px)`,
+            flexGrow: 3,
          }}
       >
          {children}
