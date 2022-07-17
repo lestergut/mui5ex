@@ -1,3 +1,4 @@
+import { ThemeContext } from '@emotion/react';
 import {
    Box,
    CssBaseline,
@@ -8,6 +9,8 @@ import {
    ListItemButton,
    ListItemIcon,
    ListItemText,
+   ImageListTile,
+   ListSubheader,
 } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { useNavigate } from 'react-router-dom';
@@ -19,38 +22,29 @@ const Sidebar = ({ drawerWidth }) => {
    let navigate = useNavigate();
    return (
       <Box
-         flex={1}
-         p={1}
-         flexShrink={1}
          sx={{
             display: { xs: 'none', sm: 'block' },
-            width: drawerWidth,
-            /* [`& .MuiDrawer-paper`]: {
-               width: drawerWidth,
-               boxSizing: 'border-box',
-            }, */
          }}
       >
-         <Box position="fixed">
-            <Drawer
-               variant="permanent"
-               sx={{ width: drawerWidth, rm: drawerWidth, border: red }}
-            >
-               <Toolbar />
-               <Box sx={{ overflow: 'auto' }}>
-                  <List>
-                     {LinkPages.map((Page) => (
-                        <ListItem key={uuidv4()} disablePadding>
-                           <ListItemButton
-                              onClick={() => navigate(`/${Page.toLowerCase()}`)}
-                           >
-                              <ListItemText primary={Page} />
-                           </ListItemButton>
-                        </ListItem>
-                     ))}
-                  </List>
-               </Box>
-            </Drawer>
+         <Box
+            position="fixed"
+            sx={{
+               width: '100%',
+               maxWidth: drawerWidth,
+            }}
+            PaperProps={{ sx: { backgroundColor: 'orage' } }}
+         >
+            <List>
+               {LinkPages.map((Page) => (
+                  <ListItem key={uuidv4()} disablePadding>
+                     <ListItemButton
+                        onClick={() => navigate(`/${Page.toLowerCase()}`)}
+                     >
+                        <ListItemText primary={Page} />
+                     </ListItemButton>
+                  </ListItem>
+               ))}
+            </List>
          </Box>
       </Box>
    );

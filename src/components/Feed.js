@@ -6,20 +6,7 @@ import KwnoledgeUnit from './KwnoledgeUnit';
 const Feed = ({ children, drawerWidth }) => {
    const [expanded, setExpanded] = useState(false);
 
-   return (
-      <Box
-         bgcolor="lightgrey"
-         flex={4}
-         flexShrink={1}
-         p={1}
-         sx={{
-            width: `calc(100% - ${drawerWidth}px)`,
-            ml: `${drawerWidth}px)`,
-         }}
-      >
-         {children}
-      </Box>
-   );
+   return <Box bgcolor="lightgrey">{children}</Box>;
 };
 
 export default Feed;

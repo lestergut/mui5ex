@@ -9,21 +9,19 @@ import Histotrac from './components/Histotrac';
 import Outport from './components/Outport';
 import GenericPRA from './components/GenericPRA';
 import Other from './components/Other';
+import { Grid } from '@mui/material';
 
 function App() {
-   const drawerWidth = 165;
+   const drawerWidth = 178;
 
    return (
-      <Box>
+      <Grid container spacing={0.5}>
          <CssBaseline />
          <Navbar />
-         <Stack
-            direction="row"
-            spacing={0}
-            justifyContent="space-between"
-            // alignItems="flex-start"
-         >
+         <Grid item sm={2} xs={0}>
             <Sidebar drawerWidth={drawerWidth} />
+         </Grid>
+         <Grid item sm={6} xs={12}>
             <Feed drawerWidth={drawerWidth}>
                <Routes>
                   {/* <Route path="/" element={<App />} /> */}
@@ -34,9 +32,11 @@ function App() {
                   <Route path="/other" element={<Other />} />
                </Routes>
             </Feed>
+         </Grid>
+         <Grid item sm={4} xs={0}>
             <Rightbar />
-         </Stack>
-      </Box>
+         </Grid>
+      </Grid>
    );
 }
 
