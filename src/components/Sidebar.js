@@ -31,6 +31,7 @@ const Sidebar = ({ drawerWidth }) => {
             sx={{
                width: '100%',
                maxWidth: drawerWidth,
+               flex: 1,
             }}
             PaperProps={{ sx: { backgroundColor: 'orage' } }}
          >
