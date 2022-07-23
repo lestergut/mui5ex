@@ -22,16 +22,7 @@ function App() {
             <Sidebar drawerWidth={drawerWidth} />
          </Grid>
          <Grid item sm={6} xs={12}>
-            <Feed drawerWidth={drawerWidth}>
-               <Routes>
-                  {/* <Route path="/" element={<App />} /> */}
-                  <Route path="/donor" element={<Donor />} />
-                  <Route path="/histotrac" element={<Histotrac />} />
-                  <Route path="/outport" element={<Outport />} />
-                  <Route path="/genericpra" element={<GenericPRA />} />
-                  <Route path="/other" element={<Other />} />
-               </Routes>
-            </Feed>
+            <Feed drawerWidth={drawerWidth} />
          </Grid>
          <Grid item sm={4} xs={0}>
             <Rightbar />

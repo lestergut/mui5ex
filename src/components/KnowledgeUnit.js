@@ -11,8 +11,8 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const KwnoledgeUnit = ({ information }) => {
-   const { title, subtitle, image, alt, resumee, content } = information;
+const KnowledgeUnit = ({ unit }) => {
+   const { title, subtitle, image, alt, resumee, content } = unit;
    return (
       <Card>
          <CardHeader title={title} subheader={subtitle} />
@@ -39,4 +39,4 @@ const KwnoledgeUnit = ({ information }) => {
    );
 };
 
-export default KwnoledgeUnit;
+export default KnowledgeUnit;

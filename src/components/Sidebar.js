@@ -37,9 +37,7 @@ const Sidebar = ({ drawerWidth }) => {
             <List>
                {LinkPages.map((Page) => (
                   <ListItem key={uuidv4()} disablePadding>
-                     <ListItemButton
-                        onClick={() => navigate(`/${Page.toLowerCase()}`)}
-                     >
+                     <ListItemButton onClick={(Page) => <Feed unit={Page} />}>
                         <ListItemText primary={Page} />
                      </ListItemButton>
                   </ListItem>
