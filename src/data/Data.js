@@ -1,4 +1,4 @@
-const Data = [
+export const Data = [
    {
       id: 0,
       category: 2, //Histotrac
@@ -23,6 +23,30 @@ const Data = [
       content:
          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate sed alias, voluptas itaque aut, porro magni, animi dolor voluptates amet. Amet autem obcaecati enim suscipit aspernatur magni, vel aut, eligendi illum voluptatibus nisi cum magnam beatae distinctio consequuntur? Nulla?',
    },
+   {
+      id: 3,
+      category: 2, //UChart
+      title: 'UChart use',
+      subtitle: 'September 19, 2018',
+      image: '/img/u-chartexcel.png',
+      alt: 'CD received and set the orders of tissue and SOP',
+      resumee:
+         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium debitis tempora rem, vero itaque voluptas quisquam qui, at quae, asperiores tenetur maxime illum ea expedita dicta assumenda earum reiciendis est!',
+      content:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate sed alias, voluptas itaque aut, porro magni, animi dolor voluptates amet. Amet autem obcaecati enim suscipit aspernatur magni, vel aut, eligendi illum voluptatibus nisi cum magnam beatae distinctio consequuntur? Nulla?',
+   },
+   {
+      id: 1,
+      category: 0, //Donor
+      title: 'Donor',
+      subtitle: 'Initial Cadaver Donor from OPO',
+      image: '/img/u-chartexcel.png',
+      alt: 'Use UChart to receive tissue and yellow cap tubes for Solid Organs',
+      resumee:
+         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium debitis tempora rem, vero itaque voluptas quisquam qui, at quae, asperiores tenetur maxime illum ea expedita dicta assumenda earum reiciendis est!',
+      content:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate sed alias, voluptas itaque aut, porro magni, animi dolor voluptates amet. Amet autem obcaecati enim suscipit aspernatur magni, vel aut, eligendi illum voluptatibus nisi cum magnam beatae distinctio consequuntur? Nulla?',
+   },
 ];
 
-export default Data;
+export const Categories = [{ id: '0', name: 'Donor', icon: '' }];

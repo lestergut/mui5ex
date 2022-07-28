@@ -10,9 +10,15 @@ import {
    Divider,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Data } from '../data/Data';
 
-const KnowledgeUnit = ({ unit }) => {
-   const { title, subtitle, image, alt, resumee, content } = unit;
+const KnowledgeUnit = ({ category }) => {
+   console.log('category from knwoledgeunit', category);
+   let units = Data.filter((item) => item.category === category);
+   if (units.length === 0) {
+      return <h1>Nothing in the Database</h1>;
+   }
+   const { title, subtitle, image, alt, resumee, content } = units;
    return (
       <Card>
          <CardHeader title={title} subheader={subtitle} />

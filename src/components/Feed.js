@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
-import Data from '../data/Data';
+// import Data from '../data/Data';
 import KnowledgeUnit from './KnowledgeUnit';
 
-const Feed = ({ unit }) => {
-   const [expanded, setExpanded] = useState(false);
-
+const Feed = ({ category }) => {
+   // const [expanded, setExpanded] = useState(false);
+   //console.log(`category from Feed ${category}`);
    return (
       <Box bgcolor="lightgrey">
-         <KnowledgeUnit unit={unit} />
+         {console.log('category from Feed', category)}
+         <KnowledgeUnit category={category} />
       </Box>
    );
 };

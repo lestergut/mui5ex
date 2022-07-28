@@ -11,15 +11,30 @@ import {
    ListItemText,
    ImageListTile,
    ListSubheader,
+   Icon,
 } from '@mui/material';
+
 import { red } from '@mui/material/colors';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import Feed from './Feed';
 
-const LinkPages = ['Donor', 'Histotrac', 'Outport', 'GenericPRA', 'Other'];
+const LinkPages = [
+   { id: 0, title: 'Donor', icon: 'medical_information' },
+   { id: 1, title: 'Histotrac', icon: 'science' },
+   { id: 2, title: 'Outport', icon: 'biotech' },
+   { id: 3, title: 'GenericPRA', icon: 'groups' },
+   { id: 4, title: 'Other', icon: 'workspaces' },
+];
 
 const Sidebar = ({ drawerWidth }) => {
-   let navigate = useNavigate();
+   // let navigate = useNavigate();
+   let category = 0;
+   const callFeed = (term) => {
+      console.log(`term from sidebar ${term}`);
+      category = term;
+   };
+
    return (
       <Box
          sx={{
@@ -35,10 +50,12 @@ const Sidebar = ({ drawerWidth }) => {
             PaperProps={{ sx: { backgroundColor: 'orage' } }}
          >
             <List>
-               {LinkPages.map((Page) => (
-                  <ListItem key={uuidv4()} disablePadding>
-                     <ListItemButton onClick={(Page) => <Feed unit={Page} />}>
-                        <ListItemText primary={Page} />
+               {LinkPages.map((page) => (
+                  <ListItem key={page.id} disablePadding>
+                     <ListItemButton onClick={() => callFeed(page.id)}>
+                        <Feed category={category} />
+                        <Icon>{page.icon}</Icon>
+                        <ListItemText primary={page.title} />
                      </ListItemButton>
                   </ListItem>
                ))}
