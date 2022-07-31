@@ -1,28 +1,32 @@
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Rightbar from './components/Rightbar';
 import { Stack, Box, CssBaseline } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
-import Donor from './components/Donor';
-import Histotrac from './components/Histotrac';
-import Outport from './components/Outport';
-import GenericPRA from './components/GenericPRA';
-import Other from './components/Other';
 import { Grid } from '@mui/material';
 
 function App() {
    const drawerWidth = 178;
+   const [category, setCategory] = useState(0);
+
+   const handleCategory = (category) => {
+      setCategory(category);
+   };
 
    return (
       <Grid container spacing={0.5}>
          <CssBaseline />
          <Navbar />
          <Grid item sm={2} xs={0}>
-            <Sidebar drawerWidth={drawerWidth} />
+            <Sidebar
+               drawerWidth={drawerWidth}
+               handleCategory={handleCategory}
+            />
          </Grid>
          <Grid item sm={6} xs={12}>
-            <Feed drawerWidth={drawerWidth} />
+            <Feed category={category} />
          </Grid>
          <Grid item sm={4} xs={0}>
             <Rightbar />

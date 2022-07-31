@@ -1,8 +1,8 @@
 export const Data = [
    {
       id: 0,
-      category: 2, //Histotrac
-      title: 'Histotrac Processing',
+      category: 2, //Outport
+      title: 'Outport Processing',
       subtitle: 'September 14, 2016',
       image: '/img/histotrac.jpg',
       alt: 'HLA Order received',
@@ -13,8 +13,8 @@ export const Data = [
    },
    {
       id: 1,
-      category: 1, //UChart
-      title: 'UChart use',
+      category: 1, //Histotrac
+      title: 'Histotrac use',
       subtitle: 'September 19, 2018',
       image: '/img/u-chartexcel.png',
       alt: 'CD received and set the orders of tissue and SOP',
@@ -25,8 +25,8 @@ export const Data = [
    },
    {
       id: 3,
-      category: 2, //UChart
-      title: 'UChart use',
+      category: 2, //Outport
+      title: 'Outport use',
       subtitle: 'September 19, 2018',
       image: '/img/u-chartexcel.png',
       alt: 'CD received and set the orders of tissue and SOP',
@@ -36,7 +36,7 @@ export const Data = [
          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptate sed alias, voluptas itaque aut, porro magni, animi dolor voluptates amet. Amet autem obcaecati enim suscipit aspernatur magni, vel aut, eligendi illum voluptatibus nisi cum magnam beatae distinctio consequuntur? Nulla?',
    },
    {
-      id: 1,
+      id: 2,
       category: 0, //Donor
       title: 'Donor',
       subtitle: 'Initial Cadaver Donor from OPO',

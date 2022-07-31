@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { ThemeContext } from '@emotion/react';
 import {
    Box,
@@ -27,13 +28,17 @@ const LinkPages = [
    { id: 4, title: 'Other', icon: 'workspaces' },
 ];
 
-const Sidebar = ({ drawerWidth }) => {
+const Sidebar = ({ drawerWidth, handleCategory }) => {
    // let navigate = useNavigate();
-   let category = 0;
-   const callFeed = (term) => {
-      console.log(`term from sidebar ${term}`);
-      category = term;
+
+   const setCategory = (category) => {
+      handleCategory(category);
    };
+
+   /* useEffect((term) => {
+      console.log(`term from sidebar ${term}`);
+      <Feed category={term} />;
+   }); */
 
    return (
       <Box
@@ -52,8 +57,7 @@ const Sidebar = ({ drawerWidth }) => {
             <List>
                {LinkPages.map((page) => (
                   <ListItem key={page.id} disablePadding>
-                     <ListItemButton onClick={() => callFeed(page.id)}>
-                        <Feed category={category} />
+                     <ListItemButton onClick={() => setCategory(page.id)}>
                         <Icon>{page.icon}</Icon>
                         <ListItemText primary={page.title} />
                      </ListItemButton>
